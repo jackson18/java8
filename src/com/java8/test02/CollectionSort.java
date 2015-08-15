@@ -20,6 +20,13 @@ public class CollectionSort {
             }
         });
 
+        //Ð´·¨1
+        Collections.sort(list, (String a, String b) -> {
+            return b.compareTo(a);
+        });
+        //Ð´·¨2
+        Collections.sort(list, (String a, String b) -> b.compareTo(a));
+        //Ð´·¨3
         Collections.sort(list, (a, b) -> b.compareTo(a));
         System.out.println(list);
     }
