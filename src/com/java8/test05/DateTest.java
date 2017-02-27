@@ -5,6 +5,7 @@ import sun.applet.Main;
 
 import java.time.Clock;
 import java.time.Instant;
+import java.time.LocalDateTime;
 import java.util.Date;
 
 /**
@@ -19,6 +20,9 @@ public class DateTest {
 
         Instant instant = clock.instant();
         Date date = Date.from(instant);
+
+        final LocalDateTime datetimeFromClock = LocalDateTime.now(clock);
+        System.out.println( datetimeFromClock );
         System.out.println(date.getTime());
     }
 
