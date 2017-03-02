@@ -3,9 +3,7 @@ package com.java8.test05;
 import com.java8.test01.SimpleInterface;
 import sun.applet.Main;
 
-import java.time.Clock;
-import java.time.Instant;
-import java.time.LocalDateTime;
+import java.time.*;
 import java.util.Date;
 
 /**
@@ -24,6 +22,11 @@ public class DateTest {
         final LocalDateTime datetimeFromClock = LocalDateTime.now(clock);
         System.out.println( datetimeFromClock );
         System.out.println(date.getTime());
+
+        final ZonedDateTime zonedDatetimeFromClock = ZonedDateTime.now(clock);
+        final ZonedDateTime zonedDatetimeFromZone = ZonedDateTime.now( ZoneId.of("America/Los_Angeles") );
+        System.out.println( zonedDatetimeFromClock );
+        System.out.println( zonedDatetimeFromZone );
     }
 
 
